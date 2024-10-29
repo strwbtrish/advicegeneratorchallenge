@@ -1,0 +1,90 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 61.5%;
+}
+
+@font-face {
+    font-family: 'Manrope';
+    src: url(font/Manrope-VariableFont_wght.ttf);
+}
+
+:root {
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+    --gray-blue: hsl(217, 19%, 38%);
+    --dark-grayish: hsl(217, 19%, 38%);
+    --dark-blue:  hsl(218, 23%, 16%);
+}
+
+body {
+    font-family: 'Manrope';
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+
+    &-advice-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60rem;
+        background-color: var(--dark-grayish);
+        padding: 3rem;
+        border-radius: 20px;
+        position: relative; 
+    }
+    
+}
+
+
+.title {
+    color: var(--neon-green);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.message {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--light-cyan);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.nextBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    width: 6rem;
+    height: 6rem;
+    border-radius: 50%;
+    z-index: 10; 
+    bottom: -4rem;
+    cursor: pointer;
+    background-color: var(--neon-green);
+    transition: all 0.3s;
+}
+
+.nextBtn img {
+    height: 3rem;
+}
+
+.nextBtn:hover {
+    box-shadow: 0 0 20px var(--neon-green), 0 0 20px var(--neon-green); 
+}
